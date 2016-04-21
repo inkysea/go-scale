@@ -20,7 +20,7 @@ func hostname(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 
-	io.WriteString(w,"Hostname reported by kernel : "+name)
+	io.WriteString(w,"Hostname reported by kernel : "+name+"\n")
 }
 
 
