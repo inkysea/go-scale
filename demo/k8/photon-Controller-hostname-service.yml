@@ -1,0 +1,17 @@
+Kubernetes:
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: hostname 
+  name: hostname 
+  namespace: default
+spec:
+  type: "LoadBalancer"
+  ports:
+  - port: 8000
+    targetPort: 8000
+    protocol: "TCP"
+    nodePort: 30001 
+  selector:
+    name: hostname 
