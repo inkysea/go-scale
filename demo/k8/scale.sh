@@ -1,5 +1,6 @@
 #!/bin/bash
 
-SCALE=$1
+K8IP=$1
+SCALE=$2
 
-kubectl -s 10.25.27.76:8080  scale --replicas=$SCALE rc hostname
+kubectl -s $K8IP:8080  scale --replicas=$SCALE rc hostname

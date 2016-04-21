@@ -1,9 +1,11 @@
 #!/bin/bash
 
+K8IP=$1
+
 while true; do
 
 # Create replication controller
-kubectl -s 10.25.27.76:8080 get pods
+kubectl -s $K8IP:8080 get pods
 sleep 4
 
 
